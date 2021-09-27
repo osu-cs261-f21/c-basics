@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
   double pi = 3.1415;
   char a = 'a';
 
-  printf("Hello world.\n");
+  printf("Hello world.\n\n\n\n\n\n\n");
 
   /*
    * Printing a floating point number with printf() using the %f placeholder.
