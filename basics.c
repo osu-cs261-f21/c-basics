@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+struct student {
+  char* name;
+  int id;
+  float gpa;
+};
+
 /*
  * A prototype for the function foo().
  */
@@ -7,18 +13,25 @@ void foo(int x);
 
 int main(int argc, char** argv) {
 
-  int i;
+  int i = 0;
   double pi = 3.1415;
   char a = 'a';
 
-  printf("Hello world.\n\n\n\n\n\n\n");
+  struct student s;
+  s.name = "Luke Skywalker";
+  s.id = 933111111;
+  s.gpa = 3.75;
+
+  printf("== %s id: %d, gpa: %f\n", s.name, s.id, s.gpa);
+
+  printf("\n\nHello world.\n\n");
 
   /*
    * Printing a floating point number with printf() using the %f placeholder.
    * The printed number will have 16 total characters, with 4 characters after
    * the decimal point, and it'll be zero-padded at the front.
    */
-  printf("== pi is: %016.4f\n", pi);
+  printf("== pi is: %f, and i is: %d\n", pi, i);
 
   /*
    * Printing a single character with printf() with the %c placeholder.
@@ -54,6 +67,8 @@ int main(int argc, char** argv) {
   foo(2);
   foo(4);
   foo(8);
+
+  /* // This is a C++ comment */
 
   return 0;
 }
